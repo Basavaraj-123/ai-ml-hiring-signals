@@ -1,0 +1,9 @@
+.git
+.venv
+storage
+tests
+tools
+__pycache__
+*.pyc
+smoke_report.txt
+.smoke_pass*.json

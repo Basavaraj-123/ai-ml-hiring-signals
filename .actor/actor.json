@@ -1,0 +1,16 @@
+{
+    "actorSpecification": 1,
+    "name": "ai-ml-hiring-signals",
+    "title": "AI/ML Hiring Signals — Track Who AI Companies Are Hiring",
+    "description": "Tracks open roles across 98 verified AI/ML companies (Greenhouse, Lever, Ashby) and surfaces hiring signals: new roles, closed roles, hiring velocity, and first-ever hires in a function.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "python-empty"
+    },
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile"
+}

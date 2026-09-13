@@ -1,0 +1,63 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "jobs": {
+            "title": "Open roles",
+            "transformation": {
+                "fields": [
+                    "company", "title", "function", "seniority", "workplace",
+                    "location_raw", "region", "salary_min", "salary_max",
+                    "tech_tags", "is_new", "days_open", "posted_at", "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "company": {"label": "Company"},
+                    "title": {"label": "Role"},
+                    "function": {"label": "Function"},
+                    "seniority": {"label": "Level"},
+                    "workplace": {"label": "Workplace"},
+                    "location_raw": {"label": "Location"},
+                    "region": {"label": "Region"},
+                    "salary_min": {"label": "Salary min"},
+                    "salary_max": {"label": "Salary max"},
+                    "tech_tags": {"label": "Tech"},
+                    "is_new": {"label": "New"},
+                    "days_open": {"label": "Days open"},
+                    "posted_at": {"label": "Posted"},
+                    "url": {"label": "Link", "format": "link"}
+                }
+            }
+        },
+        "signals": {
+            "title": "Company hiring signals",
+            "transformation": {
+                "fields": [
+                    "company", "company_category", "company_stage", "open_roles",
+                    "new_roles_this_run", "closed_roles_this_run", "net_change_30d",
+                    "hiring_trend", "gtm_signal", "first_time_functions",
+                    "new_role_titles", "scraped_at"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "company": {"label": "Company"},
+                    "company_category": {"label": "Category"},
+                    "company_stage": {"label": "Stage"},
+                    "open_roles": {"label": "Open roles"},
+                    "new_roles_this_run": {"label": "New"},
+                    "closed_roles_this_run": {"label": "Closed"},
+                    "net_change_30d": {"label": "Δ 30d"},
+                    "hiring_trend": {"label": "Trend"},
+                    "gtm_signal": {"label": "GTM signal"},
+                    "first_time_functions": {"label": "First-ever hires"},
+                    "new_role_titles": {"label": "New role titles"},
+                    "scraped_at": {"label": "Checked at"}
+                }
+            }
+        }
+    }
+}

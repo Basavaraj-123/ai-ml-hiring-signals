@@ -1,0 +1,793 @@
+{
+  "_comment": "Seed universe of AI/ML companies. 'ats' and 'slug' are best-known values; the Actor verifies every entry at runtime via resolver.py and caches the corrected mapping in the ATS_SLUG_CACHE key-value store, so a wrong seed self-heals on first run. Categories drive the `category` input filter.",
+  "_version": "2026.09",
+  "companies": [
+    {
+      "name": "Anthropic",
+      "slug": "anthropic",
+      "ats": "greenhouse",
+      "category": "foundation_model",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "OpenAI",
+      "slug": "openai",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Cohere",
+      "slug": "cohere",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "CA"
+    },
+    {
+      "name": "Stability AI",
+      "slug": "stabilityai",
+      "ats": "greenhouse",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "UK"
+    },
+    {
+      "name": "Reka AI",
+      "slug": "reka",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Black Forest Labs",
+      "slug": "black-forest-labs",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "early",
+      "hq": "EU"
+    },
+    {
+      "name": "Luma AI",
+      "slug": "lumaai",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "UK"
+    },
+    {
+      "name": "Suno",
+      "slug": "suno",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Midjourney",
+      "slug": "midjourney",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Character AI",
+      "slug": "character",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Inflection AI",
+      "slug": "inflectionai",
+      "ats": "greenhouse",
+      "category": "foundation_model",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Safe Superintelligence",
+      "slug": "safe",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Thinking Machines Lab",
+      "slug": "thinkingmachines",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Liquid AI",
+      "slug": "liquid-ai",
+      "ats": "ashby",
+      "category": "foundation_model",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Scale AI",
+      "slug": "scaleai",
+      "ats": "greenhouse",
+      "category": "ai_data",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Surge AI",
+      "slug": "surge-ai",
+      "ats": "ashby",
+      "category": "ai_data",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Labelbox",
+      "slug": "labelbox",
+      "ats": "greenhouse",
+      "category": "ai_data",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Snorkel AI",
+      "slug": "snorkelai",
+      "ats": "greenhouse",
+      "category": "ai_data",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Invisible Technologies",
+      "slug": "invisibletech",
+      "ats": "greenhouse",
+      "category": "ai_data",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Mercor",
+      "slug": "mercor",
+      "ats": "ashby",
+      "category": "ai_data",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Turing",
+      "slug": "turing",
+      "ats": "greenhouse",
+      "category": "ai_data",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Together AI",
+      "slug": "togetherai",
+      "ats": "greenhouse",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Fireworks AI",
+      "slug": "fireworks",
+      "ats": "ashby",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Baseten",
+      "slug": "baseten",
+      "ats": "ashby",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Modal Labs",
+      "slug": "modal",
+      "ats": "ashby",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Anyscale",
+      "slug": "anyscale",
+      "ats": "ashby",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Lambda Labs",
+      "slug": "lambda",
+      "ats": "ashby",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "CoreWeave",
+      "slug": "coreweave",
+      "ats": "greenhouse",
+      "category": "ai_infrastructure",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Crusoe Energy",
+      "slug": "crusoe",
+      "ats": "ashby",
+      "category": "ai_infrastructure",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Nebius",
+      "slug": "nebius",
+      "ats": "greenhouse",
+      "category": "ai_infrastructure",
+      "stage": "late",
+      "hq": "EU"
+    },
+    {
+      "name": "Cerebras Systems",
+      "slug": "cerebras",
+      "ats": "ashby",
+      "category": "ai_chips",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "SambaNova Systems",
+      "slug": "sambanovasystems",
+      "ats": "greenhouse",
+      "category": "ai_chips",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Etched",
+      "slug": "etched",
+      "ats": "ashby",
+      "category": "ai_chips",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Tenstorrent",
+      "slug": "tenstorrent",
+      "ats": "greenhouse",
+      "category": "ai_chips",
+      "stage": "growth",
+      "hq": "CA"
+    },
+    {
+      "name": "d-Matrix",
+      "slug": "d-matrix",
+      "ats": "ashby",
+      "category": "ai_chips",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "LangChain",
+      "slug": "langchain",
+      "ats": "ashby",
+      "category": "ai_devtools",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "LlamaIndex",
+      "slug": "llamaindex",
+      "ats": "ashby",
+      "category": "ai_devtools",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Braintrust",
+      "slug": "braintrust",
+      "ats": "ashby",
+      "category": "ai_devtools",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Galileo",
+      "slug": "galileo",
+      "ats": "greenhouse",
+      "category": "ai_devtools",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Arize AI",
+      "slug": "arizeai",
+      "ats": "greenhouse",
+      "category": "ai_devtools",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Comet ML",
+      "slug": "comet",
+      "ats": "greenhouse",
+      "category": "ai_devtools",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Ollama",
+      "slug": "ollama",
+      "ats": "ashby",
+      "category": "ai_devtools",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Roboflow",
+      "slug": "roboflow",
+      "ats": "ashby",
+      "category": "ai_devtools",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Unstructured",
+      "slug": "unstructured",
+      "ats": "ashby",
+      "category": "ai_devtools",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "LaunchDarkly",
+      "slug": "launchdarkly",
+      "ats": "greenhouse",
+      "category": "ai_devtools",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Pinecone",
+      "slug": "pinecone",
+      "ats": "ashby",
+      "category": "vector_db",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Weaviate",
+      "slug": "weaviate",
+      "ats": "ashby",
+      "category": "vector_db",
+      "stage": "growth",
+      "hq": "EU"
+    },
+    {
+      "name": "Chroma",
+      "slug": "trychroma",
+      "ats": "ashby",
+      "category": "vector_db",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Zilliz",
+      "slug": "zilliz",
+      "ats": "lever",
+      "category": "vector_db",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "LanceDB",
+      "slug": "lancedb",
+      "ats": "ashby",
+      "category": "vector_db",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Turbopuffer",
+      "slug": "turbopuffer",
+      "ats": "ashby",
+      "category": "vector_db",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Perplexity AI",
+      "slug": "perplexity",
+      "ats": "ashby",
+      "category": "ai_search",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Glean",
+      "slug": "gleanwork",
+      "aliases": [
+        "gleanwork"
+      ],
+      "ats": "greenhouse",
+      "category": "ai_search",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Exa",
+      "slug": "exa",
+      "ats": "ashby",
+      "category": "ai_search",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Elicit",
+      "slug": "elicit",
+      "ats": "ashby",
+      "category": "ai_search",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Cursor (Anysphere)",
+      "slug": "cursor",
+      "ats": "ashby",
+      "category": "ai_coding",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Cognition AI",
+      "slug": "cognition",
+      "ats": "ashby",
+      "category": "ai_coding",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Replit",
+      "slug": "replit",
+      "ats": "ashby",
+      "category": "ai_coding",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Poolside",
+      "slug": "poolside",
+      "ats": "ashby",
+      "category": "ai_coding",
+      "stage": "growth",
+      "hq": "EU"
+    },
+    {
+      "name": "Vercel",
+      "slug": "vercel",
+      "ats": "greenhouse",
+      "category": "ai_coding",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "StackBlitz",
+      "slug": "stackblitz",
+      "ats": "greenhouse",
+      "category": "ai_coding",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Lovable",
+      "slug": "lovable",
+      "ats": "greenhouse",
+      "category": "ai_coding",
+      "stage": "growth",
+      "hq": "EU"
+    },
+    {
+      "name": "Sierra AI",
+      "slug": "sierra",
+      "ats": "ashby",
+      "category": "ai_agents",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Decagon",
+      "slug": "decagon",
+      "ats": "ashby",
+      "category": "ai_agents",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Imbue",
+      "slug": "imbue",
+      "ats": "greenhouse",
+      "category": "ai_agents",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Relevance AI",
+      "slug": "relevanceai",
+      "ats": "ashby",
+      "category": "ai_agents",
+      "stage": "early",
+      "hq": "APAC"
+    },
+    {
+      "name": "Browserbase",
+      "slug": "browserbase",
+      "ats": "ashby",
+      "category": "ai_agents",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "Apify",
+      "slug": "apify",
+      "ats": "ashby",
+      "category": "ai_agents",
+      "stage": "growth",
+      "hq": "EU"
+    },
+    {
+      "name": "E2B",
+      "slug": "e2b",
+      "ats": "ashby",
+      "category": "ai_agents",
+      "stage": "early",
+      "hq": "EU"
+    },
+    {
+      "name": "Harvey AI",
+      "slug": "harvey",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Abridge",
+      "slug": "abridge",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Ambience Healthcare",
+      "slug": "ambiencehealthcare",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "OpenEvidence",
+      "slug": "openevidence",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Writer",
+      "slug": "writer",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "late",
+      "hq": "UK"
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "ats": "greenhouse",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Descript",
+      "slug": "descript",
+      "ats": "greenhouse",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Gamma",
+      "slug": "gamma",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Notion",
+      "slug": "notion",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Linear",
+      "slug": "linear",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Granola",
+      "slug": "granola",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "early",
+      "hq": "UK"
+    },
+    {
+      "name": "Sardine AI",
+      "slug": "sardine",
+      "ats": "ashby",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Cresta",
+      "slug": "cresta",
+      "ats": "greenhouse",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Observe AI",
+      "slug": "observeai",
+      "ats": "greenhouse",
+      "category": "ai_application",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Databricks",
+      "slug": "databricks",
+      "ats": "greenhouse",
+      "category": "ai_platform",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Snowflake",
+      "slug": "snowflake",
+      "ats": "ashby",
+      "category": "ai_platform",
+      "stage": "public",
+      "hq": "US"
+    },
+    {
+      "name": "Dataiku",
+      "slug": "dataiku",
+      "ats": "greenhouse",
+      "category": "ai_platform",
+      "stage": "late",
+      "hq": "EU"
+    },
+    {
+      "name": "Apollo Research",
+      "slug": "apolloresearch",
+      "ats": "lever",
+      "category": "ai_safety",
+      "stage": "nonprofit",
+      "hq": "UK"
+    },
+    {
+      "name": "Goodfire",
+      "slug": "goodfire",
+      "ats": "greenhouse",
+      "category": "ai_safety",
+      "stage": "early",
+      "hq": "US"
+    },
+    {
+      "name": "HiddenLayer",
+      "slug": "hiddenlayer",
+      "ats": "greenhouse",
+      "category": "ai_safety",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Figure AI",
+      "slug": "figureai",
+      "ats": "greenhouse",
+      "category": "ai_robotics",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Physical Intelligence",
+      "slug": "physicalintelligence",
+      "ats": "ashby",
+      "category": "ai_robotics",
+      "stage": "growth",
+      "hq": "US"
+    },
+    {
+      "name": "Waymo",
+      "slug": "waymo",
+      "ats": "greenhouse",
+      "category": "ai_robotics",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Wayve",
+      "slug": "wayve",
+      "ats": "greenhouse",
+      "category": "ai_robotics",
+      "stage": "late",
+      "hq": "UK"
+    },
+    {
+      "name": "Nuro",
+      "slug": "nuro",
+      "ats": "greenhouse",
+      "category": "ai_robotics",
+      "stage": "late",
+      "hq": "US"
+    },
+    {
+      "name": "Applied Intuition",
+      "slug": "applied",
+      "ats": "ashby",
+      "category": "ai_robotics",
+      "stage": "late",
+      "hq": "US"
+    }
+  ]
+}

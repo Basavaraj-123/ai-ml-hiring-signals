@@ -1,0 +1,277 @@
+{
+    "title": "AI/ML Hiring Signals",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "categories": {
+            "title": "AI company categories",
+            "type": "array",
+            "description": "Which slice of the AI market to track. Leave as 'all' to cover the whole registry.",
+            "editor": "select",
+            "default": [
+                "all"
+            ],
+            "prefill": [
+                "foundation_model",
+                "ai_infrastructure",
+                "ai_agents"
+            ],
+            "items": {
+                "type": "string",
+                "enum": [
+                    "all",
+                    "foundation_model",
+                    "ai_infrastructure",
+                    "ai_chips",
+                    "ai_devtools",
+                    "ai_agents",
+                    "ai_coding",
+                    "ai_data",
+                    "ai_search",
+                    "vector_db",
+                    "ai_application",
+                    "ai_platform",
+                    "ai_safety",
+                    "ai_robotics"
+                ],
+                "enumTitles": [
+                    "All categories",
+                    "Foundation models / labs",
+                    "AI infrastructure & inference",
+                    "AI chips & hardware",
+                    "AI developer tools & observability",
+                    "AI agents & automation",
+                    "AI coding tools",
+                    "Data labeling & training data",
+                    "AI search & research",
+                    "Vector databases",
+                    "Vertical AI applications",
+                    "ML/data platforms",
+                    "AI safety & security",
+                    "Robotics & autonomy"
+                ]
+            }
+        },
+        "stages": {
+            "title": "Funding stage",
+            "type": "array",
+            "description": "Filter the registry by company maturity.",
+            "editor": "select",
+            "default": [
+                "all"
+            ],
+            "items": {
+                "type": "string",
+                "enum": [
+                    "all",
+                    "early",
+                    "growth",
+                    "late",
+                    "public",
+                    "nonprofit"
+                ],
+                "enumTitles": [
+                    "All stages",
+                    "Early (seed / Series A)",
+                    "Growth (Series B–C)",
+                    "Late stage",
+                    "Public",
+                    "Non-profit / research lab"
+                ]
+            }
+        },
+        "outputMode": {
+            "title": "What to output",
+            "type": "string",
+            "description": "'Jobs' gives one row per open role. 'Signals' gives one row per company with the hiring deltas — this is the lead-gen view. 'Both' returns each.",
+            "editor": "select",
+            "default": "jobs",
+            "enum": [
+                "jobs",
+                "signals",
+                "both"
+            ],
+            "enumTitles": [
+                "Job listings (one row per role)",
+                "Company hiring signals (one row per company)",
+                "Both"
+            ]
+        },
+        "functions": {
+            "title": "Job function",
+            "type": "array",
+            "description": "Restrict to specific role families. Leave empty for all.",
+            "editor": "select",
+            "default": [],
+            "items": {
+                "type": "string",
+                "enum": [
+                    "ml_research",
+                    "ml_engineering",
+                    "engineering",
+                    "infrastructure",
+                    "data",
+                    "devrel",
+                    "security",
+                    "product",
+                    "design",
+                    "sales",
+                    "marketing",
+                    "recruiting",
+                    "finance",
+                    "legal",
+                    "operations",
+                    "support",
+                    "other"
+                ]
+            }
+        },
+        "seniorities": {
+            "title": "Seniority",
+            "type": "array",
+            "description": "Restrict to specific experience levels. Derived from the job title. Leave empty for all levels.",
+            "editor": "select",
+            "default": [],
+            "items": {
+                "type": "string",
+                "enum": [
+                    "intern",
+                    "junior",
+                    "mid",
+                    "senior",
+                    "staff",
+                    "principal",
+                    "manager",
+                    "director",
+                    "executive"
+                ]
+            }
+        },
+        "regions": {
+            "title": "Region",
+            "type": "array",
+            "description": "Derived from the posting's location text.",
+            "editor": "select",
+            "default": [],
+            "items": {
+                "type": "string",
+                "enum": [
+                    "us",
+                    "uk",
+                    "eu",
+                    "in",
+                    "apac",
+                    "ca",
+                    "latam",
+                    "mea"
+                ],
+                "enumTitles": [
+                    "United States",
+                    "United Kingdom",
+                    "Europe",
+                    "India",
+                    "APAC",
+                    "Canada",
+                    "LATAM",
+                    "Middle East & Africa"
+                ]
+            }
+        },
+        "workplace": {
+            "title": "Workplace type",
+            "type": "string",
+            "description": "Filter by where the role is performed. Inferred from the ATS field when present, otherwise from the location and description text.",
+            "editor": "select",
+            "default": "any",
+            "enum": [
+                "any",
+                "remote",
+                "hybrid",
+                "onsite"
+            ],
+            "enumTitles": [
+                "Any",
+                "Remote only",
+                "Hybrid only",
+                "On-site only"
+            ]
+        },
+        "titleKeywords": {
+            "title": "Title / description must contain",
+            "type": "array",
+            "description": "Case-insensitive. A role matches if ANY keyword is present.",
+            "editor": "stringList",
+            "default": [],
+            "prefill": [
+                "llm",
+                "inference"
+            ]
+        },
+        "excludeKeywords": {
+            "title": "Exclude if it contains",
+            "type": "array",
+            "description": "Case-insensitive. A role is dropped if ANY of these appears in its title or description.",
+            "editor": "stringList",
+            "default": [],
+            "prefill": [
+                "intern"
+            ]
+        },
+        "onlyNewRoles": {
+            "title": "Only roles new since the last run",
+            "type": "boolean",
+            "description": "Requires at least one previous run — the first run has no baseline to compare against.",
+            "editor": "checkbox",
+            "default": false
+        },
+        "onlySignalCompanies": {
+            "title": "Only companies with a hiring signal this run",
+            "type": "boolean",
+            "description": "Skip companies whose board is unchanged. Ideal for a daily schedule feeding a Slack digest or CRM.",
+            "editor": "checkbox",
+            "default": false
+        },
+        "minSalary": {
+            "title": "Minimum salary (max of the posted band)",
+            "type": "integer",
+            "description": "Keep only roles whose posted salary band tops out at or above this figure. Roles with no published salary are excluded when this is set.",
+            "editor": "number",
+            "unit": "USD",
+            "minimum": 0
+        },
+        "maxCompanies": {
+            "title": "Max companies per run",
+            "type": "integer",
+            "description": "Caps how many companies are taken from the built-in registry. Companies you list in 'Add your own companies' are always included on top of this.",
+            "editor": "number",
+            "default": 60,
+            "minimum": 1,
+            "maximum": 500
+        },
+        "maxJobsPerCompany": {
+            "title": "Max jobs per company",
+            "type": "integer",
+            "description": "Safety cap for very large boards. Companies with more open roles than this are truncated.",
+            "editor": "number",
+            "default": 200,
+            "minimum": 1,
+            "maximum": 1000
+        },
+        "concurrency": {
+            "title": "Concurrent board requests",
+            "type": "integer",
+            "description": "How many company boards to fetch in parallel. Higher is faster; leave at the default unless you are tuning a large run.",
+            "editor": "number",
+            "default": 6,
+            "minimum": 1,
+            "maximum": 12
+        },
+        "extraCompanies": {
+            "title": "Add your own companies",
+            "type": "array",
+            "description": "Track companies outside the built-in registry. Give at least a name; the Actor auto-detects the ATS and slug. Example: [{\"name\":\"Acme AI\"}, {\"name\":\"Foo\",\"ats\":\"greenhouse\",\"slug\":\"foo\"}]",
+            "editor": "json",
+            "default": []
+        }
+    }
+}

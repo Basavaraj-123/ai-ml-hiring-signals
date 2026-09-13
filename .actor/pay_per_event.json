@@ -1,0 +1,17 @@
+{
+    "actor-start": {
+        "eventTitle": "Actor start",
+        "eventDescription": "Flat fee charged once when a run begins.",
+        "eventPriceUsd": 0.005
+    },
+    "job-result": {
+        "eventTitle": "Enriched job result",
+        "eventDescription": "One open role with function, seniority, workplace, region, salary band and tech tags.",
+        "eventPriceUsd": 0.002
+    },
+    "company-signal": {
+        "eventTitle": "Company hiring signal",
+        "eventDescription": "One company-level record: new/closed roles, 30-day hiring trend, and first-ever-hire signals.",
+        "eventPriceUsd": 0.02
+    }
+}
