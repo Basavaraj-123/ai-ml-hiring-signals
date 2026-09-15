@@ -1,33 +1,371 @@
 {
     "actorSpecification": 1,
-    "fields": {},
+    "fields": {
+        "type": "object",
+        "properties": {
+            "record_type": {
+                "type": "string",
+                "title": "Record type",
+                "description": "Present and equal to 'company_signal' on company rows; absent on job rows.",
+                "example": "company_signal"
+            },
+            "company": {
+                "type": "string",
+                "title": "Company",
+                "description": "Company name from the curated AI/ML registry.",
+                "example": "Anthropic"
+            },
+            "company_category": {
+                "type": "string",
+                "title": "Category",
+                "description": "Which slice of the AI market the company belongs to.",
+                "example": "foundation_model"
+            },
+            "company_stage": {
+                "type": "string",
+                "title": "Funding stage",
+                "description": "Company maturity.",
+                "example": "late"
+            },
+            "company_hq": {
+                "type": "string",
+                "title": "HQ region",
+                "description": "Headquarters region code.",
+                "example": "US"
+            },
+            "ats": {
+                "type": "string",
+                "title": "ATS",
+                "description": "Which applicant tracking system serves the board.",
+                "example": "greenhouse"
+            },
+            "ats_slug": {
+                "type": "string",
+                "title": "ATS slug",
+                "description": "Board identifier on that ATS.",
+                "example": "anthropic"
+            },
+            "scraped_at": {
+                "type": "string",
+                "title": "Checked at",
+                "description": "UTC timestamp of the run.",
+                "example": "2026-09-13T19:02:51+00:00"
+            },
+            "job_id": {
+                "type": "string",
+                "title": "Job ID",
+                "description": "Stable identifier from the ATS.",
+                "example": "4461450009"
+            },
+            "title": {
+                "type": "string",
+                "title": "Role",
+                "description": "Job title as published.",
+                "example": "Senior Research Engineer, Interpretability"
+            },
+            "url": {
+                "type": "string",
+                "title": "Link",
+                "description": "Public posting URL.",
+                "example": "https://job-boards.greenhouse.io/anthropic/jobs/4461450009"
+            },
+            "apply_url": {
+                "type": "string",
+                "title": "Apply link",
+                "description": "Direct application URL where the ATS exposes one.",
+                "example": "https://job-boards.greenhouse.io/anthropic/jobs/4461450009"
+            },
+            "function": {
+                "type": "string",
+                "title": "Function",
+                "description": "Role family derived from the title and department.",
+                "example": "ml_research"
+            },
+            "seniority": {
+                "type": "string",
+                "title": "Level",
+                "description": "Experience level derived from the title.",
+                "example": "senior"
+            },
+            "workplace": {
+                "type": "string",
+                "title": "Workplace",
+                "description": "remote, hybrid, onsite, or unknown.",
+                "example": "remote"
+            },
+            "location_raw": {
+                "type": "string",
+                "title": "Location",
+                "description": "Location string as published.",
+                "example": "San Francisco, CA"
+            },
+            "region": {
+                "type": "string",
+                "title": "Region",
+                "description": "Region code inferred from the location.",
+                "example": "US"
+            },
+            "department": {
+                "type": "string",
+                "title": "Department",
+                "description": "Department from the ATS, where provided.",
+                "example": "Research"
+            },
+            "team": {
+                "type": "string",
+                "title": "Team",
+                "description": "Team from the ATS, where provided.",
+                "example": "Interpretability"
+            },
+            "employment_type": {
+                "type": "string",
+                "title": "Employment type",
+                "description": "Full-time, contract, and so on.",
+                "example": "Full-time"
+            },
+            "salary_min": {
+                "type": "integer",
+                "title": "Salary min",
+                "description": "Bottom of the published band. Absent if none published.",
+                "example": 340000
+            },
+            "salary_max": {
+                "type": "integer",
+                "title": "Salary max",
+                "description": "Top of the published band.",
+                "example": 505000
+            },
+            "salary_currency": {
+                "type": "string",
+                "title": "Currency",
+                "description": "Currency of the published band.",
+                "example": "USD"
+            },
+            "salary_midpoint": {
+                "type": "integer",
+                "title": "Salary midpoint",
+                "description": "Midpoint of the published band.",
+                "example": 422500
+            },
+            "tech_tags": {
+                "type": "array",
+                "title": "Tech tags",
+                "description": "AI/ML technologies detected in the title and description.",
+                "items": {
+                    "type": "string"
+                },
+                "example": [
+                    "jax",
+                    "pytorch"
+                ]
+            },
+            "posted_at": {
+                "type": "string",
+                "title": "Posted",
+                "description": "When the role was first published.",
+                "example": "2026-07-15T14:00:00+00:00"
+            },
+            "updated_at": {
+                "type": "string",
+                "title": "Updated",
+                "description": "When the ATS last modified the posting.",
+                "example": "2026-09-01T14:00:00+00:00"
+            },
+            "first_seen_at": {
+                "type": "string",
+                "title": "First seen",
+                "description": "When this Actor first observed the role.",
+                "example": "2026-09-13T19:02:51+00:00"
+            },
+            "days_open": {
+                "type": "integer",
+                "title": "Days open",
+                "description": "Days since the role was posted.",
+                "example": 60
+            },
+            "is_new": {
+                "type": "boolean",
+                "title": "New",
+                "description": "True if the role appeared since the previous run.",
+                "example": true
+            },
+            "is_first_hire_for_function": {
+                "type": "boolean",
+                "title": "First hire for function",
+                "description": "True if this is the first role this company has ever opened in this function.",
+                "example": false
+            },
+            "signal_note": {
+                "type": "string",
+                "title": "Signal note",
+                "description": "Plain-English explanation when a first-of-its-kind hire is detected.",
+                "example": "First-ever devrel role seen at this company - pushing developer adoption."
+            },
+            "description_excerpt": {
+                "type": "string",
+                "title": "Description excerpt",
+                "description": "First 600 characters of the posting, HTML stripped.",
+                "example": "Work on sparse autoencoders and model internals."
+            },
+            "open_roles": {
+                "type": "integer",
+                "title": "Open roles",
+                "description": "Total roles open at this company right now.",
+                "example": 214
+            },
+            "new_roles_this_run": {
+                "type": "integer",
+                "title": "New roles",
+                "description": "Roles that appeared since the previous run.",
+                "example": 6
+            },
+            "closed_roles_this_run": {
+                "type": "integer",
+                "title": "Closed roles",
+                "description": "Roles that disappeared since the previous run.",
+                "example": 3
+            },
+            "net_change_30d": {
+                "type": "integer",
+                "title": "Net change 30d",
+                "description": "Change in open headcount against the oldest observation in a 30-day window.",
+                "example": 18
+            },
+            "hiring_trend": {
+                "type": "string",
+                "title": "Trend",
+                "description": "expanding, contracting, or flat.",
+                "example": "expanding"
+            },
+            "gtm_signal": {
+                "type": "boolean",
+                "title": "GTM signal",
+                "description": "True when a company opens its first ever sales, marketing or devrel role.",
+                "example": true
+            },
+            "first_time_functions": {
+                "type": "array",
+                "title": "First-ever hires",
+                "description": "Functions this company has never hired for before this run.",
+                "items": {
+                    "type": "string"
+                },
+                "example": [
+                    "devrel"
+                ]
+            },
+            "new_role_titles": {
+                "type": "array",
+                "title": "New role titles",
+                "description": "Titles of the roles that are new this run.",
+                "items": {
+                    "type": "string"
+                },
+                "example": [
+                    "Developer Advocate, Claude Code"
+                ]
+            },
+            "roles_by_function": {
+                "type": "object",
+                "title": "Roles by function",
+                "description": "Count of currently open roles per function.",
+                "example": {
+                    "ml_research": 61,
+                    "engineering": 44
+                }
+            },
+            "closed_roles": {
+                "type": "array",
+                "title": "Closed roles",
+                "description": "Roles that were open last run and are gone now.",
+                "items": {
+                    "type": "object"
+                }
+            },
+            "is_first_observation": {
+                "type": "boolean",
+                "title": "First observation",
+                "description": "True on the very first run for a company, when no baseline exists yet.",
+                "example": false
+            },
+            "board_url": {
+                "type": "string",
+                "title": "Board",
+                "description": "The company's job board.",
+                "example": "https://greenhouse.io/anthropic"
+            }
+        },
+        "required": [
+            "company"
+        ]
+    },
     "views": {
         "jobs": {
             "title": "Open roles",
             "transformation": {
                 "fields": [
-                    "company", "title", "function", "seniority", "workplace",
-                    "location_raw", "region", "salary_min", "salary_max",
-                    "tech_tags", "is_new", "days_open", "posted_at", "url"
+                    "company",
+                    "title",
+                    "function",
+                    "seniority",
+                    "workplace",
+                    "location_raw",
+                    "region",
+                    "salary_min",
+                    "salary_max",
+                    "tech_tags",
+                    "is_new",
+                    "days_open",
+                    "posted_at",
+                    "url"
                 ]
             },
             "display": {
                 "component": "table",
                 "properties": {
-                    "company": {"label": "Company"},
-                    "title": {"label": "Role"},
-                    "function": {"label": "Function"},
-                    "seniority": {"label": "Level"},
-                    "workplace": {"label": "Workplace"},
-                    "location_raw": {"label": "Location"},
-                    "region": {"label": "Region"},
-                    "salary_min": {"label": "Salary min"},
-                    "salary_max": {"label": "Salary max"},
-                    "tech_tags": {"label": "Tech"},
-                    "is_new": {"label": "New"},
-                    "days_open": {"label": "Days open"},
-                    "posted_at": {"label": "Posted"},
-                    "url": {"label": "Link", "format": "link"}
+                    "company": {
+                        "label": "Company"
+                    },
+                    "title": {
+                        "label": "Role"
+                    },
+                    "function": {
+                        "label": "Function"
+                    },
+                    "seniority": {
+                        "label": "Level"
+                    },
+                    "workplace": {
+                        "label": "Workplace"
+                    },
+                    "location_raw": {
+                        "label": "Location"
+                    },
+                    "region": {
+                        "label": "Region"
+                    },
+                    "salary_min": {
+                        "label": "Salary min"
+                    },
+                    "salary_max": {
+                        "label": "Salary max"
+                    },
+                    "tech_tags": {
+                        "label": "Tech"
+                    },
+                    "is_new": {
+                        "label": "New"
+                    },
+                    "days_open": {
+                        "label": "Days open"
+                    },
+                    "posted_at": {
+                        "label": "Posted"
+                    },
+                    "url": {
+                        "label": "Link",
+                        "format": "link"
+                    }
                 }
             }
         },
@@ -35,27 +373,59 @@
             "title": "Company hiring signals",
             "transformation": {
                 "fields": [
-                    "company", "company_category", "company_stage", "open_roles",
-                    "new_roles_this_run", "closed_roles_this_run", "net_change_30d",
-                    "hiring_trend", "gtm_signal", "first_time_functions",
-                    "new_role_titles", "scraped_at"
+                    "company",
+                    "company_category",
+                    "company_stage",
+                    "open_roles",
+                    "new_roles_this_run",
+                    "closed_roles_this_run",
+                    "net_change_30d",
+                    "hiring_trend",
+                    "gtm_signal",
+                    "first_time_functions",
+                    "new_role_titles",
+                    "scraped_at"
                 ]
             },
             "display": {
                 "component": "table",
                 "properties": {
-                    "company": {"label": "Company"},
-                    "company_category": {"label": "Category"},
-                    "company_stage": {"label": "Stage"},
-                    "open_roles": {"label": "Open roles"},
-                    "new_roles_this_run": {"label": "New"},
-                    "closed_roles_this_run": {"label": "Closed"},
-                    "net_change_30d": {"label": "Δ 30d"},
-                    "hiring_trend": {"label": "Trend"},
-                    "gtm_signal": {"label": "GTM signal"},
-                    "first_time_functions": {"label": "First-ever hires"},
-                    "new_role_titles": {"label": "New role titles"},
-                    "scraped_at": {"label": "Checked at"}
+                    "company": {
+                        "label": "Company"
+                    },
+                    "company_category": {
+                        "label": "Category"
+                    },
+                    "company_stage": {
+                        "label": "Stage"
+                    },
+                    "open_roles": {
+                        "label": "Open roles"
+                    },
+                    "new_roles_this_run": {
+                        "label": "New"
+                    },
+                    "closed_roles_this_run": {
+                        "label": "Closed"
+                    },
+                    "net_change_30d": {
+                        "label": "Δ 30d"
+                    },
+                    "hiring_trend": {
+                        "label": "Trend"
+                    },
+                    "gtm_signal": {
+                        "label": "GTM signal"
+                    },
+                    "first_time_functions": {
+                        "label": "First-ever hires"
+                    },
+                    "new_role_titles": {
+                        "label": "New role titles"
+                    },
+                    "scraped_at": {
+                        "label": "Checked at"
+                    }
                 }
             }
         }

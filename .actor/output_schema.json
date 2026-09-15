@@ -1,0 +1,31 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "AI/ML Hiring Signals output",
+    "description": "Open roles and company-level hiring signals from AI/ML company job boards, plus a per-run summary of which boards were reachable.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Open roles and hiring signals",
+            "description": "Every enriched job record and company signal row produced by this run.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "openRoles": {
+            "type": "string",
+            "title": "Open roles only",
+            "description": "Job records with function, seniority, workplace, region, salary band and tech tags.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=jobs"
+        },
+        "companySignals": {
+            "type": "string",
+            "title": "Company hiring signals only",
+            "description": "One row per company: new and closed roles, 30-day hiring trend, and first-ever-hire signals.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=signals"
+        },
+        "runSummary": {
+            "type": "string",
+            "title": "Run summary",
+            "description": "Counts of companies selected, boards resolved, boards fetched, and any board that failed.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/RUN_SUMMARY"
+        }
+    }
+}
